@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidigniter.loginandregistration">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.androidigniter.loginandregistration.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.androidigniter.loginandregistration.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.androidigniter.loginandregistration.DashboardActivity" />
+
+        <activity android:name=".AddRelative"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ViewRelative"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".helplineCall"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".AddKeywords"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ViewKeywords"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".HowToSwipe"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".DeveloperByActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".PermissionsDetail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service
+            android:name=".shakeit.ShakeService"
+            android:enabled="true"
+            android:exported="true" />
+
+    </application>
+
+</manifest>
